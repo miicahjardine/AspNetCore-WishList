@@ -1,0 +1,119 @@
+{
+ "properties": {
+  "displayName": "RobecoSql",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "SQL",
+   "deploymentMode": "DoNotEnforce",
+   "createdBy": "0f8531d8-6b6c-4d65-95b0-f198fe116acb",
+   "createdOn": "2022-06-10T14:26:46.548098Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "RobecoSqlServerAzureActiveDirectory.PolicyEffect": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Robeco Sql Server Azure Active Directory Policy Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "AuditIfNotExists",
+     "Disabled",
+     "Deny"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoSqlServerDefender.PolicyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Robeco Sql Server Defender Policy Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "DeployIfNotExists",
+     "Disabled"
+    ],
+    "defaultValue": "DeployIfNotExists"
+   },
+   "RobecoSqlServerPublicAccess.PolicyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Robeco Sql Server Public Access Policy Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Audit",
+     "Deny",
+     "Disabled"
+    ],
+    "defaultValue": "Audit"
+   },
+   "RobecoSqlServerAuditToSentinel.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Robeco Sql Audit To Sentinel Policy Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "DeployIfNotExists",
+     "Disabled"
+    ],
+    "defaultValue": "DeployIfNotExists"
+   },
+   "RobecoSqlServerAuditToSentinel.logAnalyticsWorkspaceId": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Log Analytics workspace",
+     "description": "Specify the Log Analytics workspace the server should be connected to.",
+     "assignPermissions": true
+    },
+    "defaultValue": "/subscriptions/0c137f7c-777b-4375-9ea2-fafe20c2a5b8/resourcegroups/rg-sentinel-weu-dev/providers/microsoft.operationalinsights/workspaces/rb-seco-sentinel-dev"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "7797437218222248583",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerAzureActiveDirectory",
+    "parameters": {
+     "RobecoSqlServerAzureActiveDirectory.policyEffect": {
+      "value": "[parameters('RobecoSqlServerAzureActiveDirectory.policyEffect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "16834542670267024013",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerDefender",
+    "parameters": {
+     "RobecoSqlServerDefender.policyEffect": {
+      "value": "[parameters('RobecoSqlServerDefender.policyEffect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "978960737992657216",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerPublicAccess",
+    "parameters": {
+     "RobecoSqlServerPublicAccess.policyEffect": {
+      "value": "[parameters('RobecoSqlServerPublicAccess.PolicyEffect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "10666541277031413845",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerAuditToSentinel",
+    "parameters": {
+     "RobecoSqlServerAuditToSentinel.policyEffect": {
+      "value": "[parameters('RobecoSqlServerAuditToSentinel.PolicyEffect')]"
+     },
+     "RobecoSqlServerAuditToSentinel.logAnalyticsWorkspaceId": {
+      "value": "[parameters('RobecoSqlServerAuditToSentinel.logAnalyticsWorkspaceId')]"
+     }
+    }
+   }
+  ]
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policySetDefinitions/RobecoSql",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "RobecoSql"
+}
