@@ -1,0 +1,31 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "fa7658a1-20d0-450d-86d7-67c1dabcb5b1",
+  "tenantId": "47caabd8-42ea-4e0c-b83d-14e9e34f87b1",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "RobecoSqlManualPolicy",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RB-Sandbox/providers/Microsoft.Authorization/policySetDefinitions/e0a278cf4e124d49b67fe377",
+  "scope": "/providers/Microsoft.Management/managementGroups/RB-Sandbox",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "svc_office365_admin03@robecobva.onmicrosoft.com ",
+   "parameterScopes": {},
+   "createdBy": "0f8531d8-6b6c-4d65-95b0-f198fe116acb",
+   "createdOn": "2022-06-13T09:24:29.2229031Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "DoNotEnforce"
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/RB-Sandbox/providers/Microsoft.Authorization/policyAssignments/cd8cb1cca16c4fbd968a9527",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "cd8cb1cca16c4fbd968a9527",
+ "location": "eastus"
+}

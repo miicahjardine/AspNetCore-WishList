@@ -1,0 +1,48 @@
+{
+ "properties": {
+  "displayName": "RobecoSqlManualPolicy",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "SQL",
+   "createdBy": "0f8531d8-6b6c-4d65-95b0-f198fe116acb",
+   "createdOn": "2022-06-13T09:23:51.3576302Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Robeco Sql Server Audit To Sentinel_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerAuditToSentinel",
+    "parameters": {
+     "RobecoSqlServerAuditToSentinel.logAnalyticsWorkspaceId": {
+      "value": "/subscriptions/0c137f7c-777b-4375-9ea2-fafe20c2a5b8/resourcegroups/rg-sentinel-weu-dev/providers/microsoft.operationalinsights/workspaces/rb-seco-sentinel-dev"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Robeco Sql Server Azure Active Directory_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerAzureActiveDirectory",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Robeco SQL Server Defender_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSQLServerDefender",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Robeco Sql Server Public Access_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoSqlServerPublicAccess",
+    "parameters": {},
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/RB-Sandbox/providers/Microsoft.Authorization/policySetDefinitions/e0a278cf4e124d49b67fe377",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "e0a278cf4e124d49b67fe377"
+}
