@@ -1,0 +1,33 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "RobecoSql",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policySetDefinitions/RobecoSql",
+  "scope": "/subscriptions/e8ded9ed-671c-4904-aac0-ed7e3a61e1bd",
+  "notScopes": [],
+  "parameters": {
+   "RobecoSqlServerAuditToSentinel.logAnalyticsWorkspaceId": {
+    "value": "/subscriptions/0c137f7c-777b-4375-9ea2-fafe20c2a5b8/resourcegroups/rg-sentinel-weu-dev/providers/microsoft.operationalinsights/workspaces/rb-seco-sentinel-dev"
+   },
+   "RobecoSqlServerAuditToSentinelModify.logAnalyticsWorkspaceId": {
+    "value": "/subscriptions/0c137f7c-777b-4375-9ea2-fafe20c2a5b8/resourcegroups/rg-sentinel-weu-dev/providers/microsoft.operationalinsights/workspaces/rb-seco-sentinel-dev"
+   }
+  },
+  "metadata": {
+   "assignedBy": "svc_office365_admin03@robecobva.onmicrosoft.com ",
+   "parameterScopes": {},
+   "createdBy": "0f8531d8-6b6c-4d65-95b0-f198fe116acb",
+   "createdOn": "2022-06-21T10:47:17.253725Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/e8ded9ed-671c-4904-aac0-ed7e3a61e1bd/providers/Microsoft.Authorization/policyAssignments/16ba744ea66a423c83e1576d",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "16ba744ea66a423c83e1576d",
+ "location": "westeurope"
+}
