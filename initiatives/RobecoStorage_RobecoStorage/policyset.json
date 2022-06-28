@@ -1,0 +1,248 @@
+{
+ "properties": {
+  "displayName": "RobecoStorage",
+  "policyType": "Custom",
+  "description": "",
+  "metadata": {
+   "category": "Storage",
+   "deploymentMode": "DoNotEnforce",
+   "createdBy": "74bb79b3-df08-4795-ac12-629c255335c6",
+   "createdOn": "2022-06-28T11:05:42.2986783Z",
+   "updatedBy": "0f8531d8-6b6c-4d65-95b0-f198fe116acb",
+   "updatedOn": "2022-06-28T11:49:46.0106333Z"
+  },
+  "parameters": {
+   "RobecoStorageDisableAnonymousAccess.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageDisableAnonymousAccess.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStorageEnforceHTTPS.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageEnforceHTTPS.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStorageRestrictPublicStorageAccounts.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageRestrictPublicStorageAccounts.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStorageEncryptionAtRest.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageEncryptionAtRest.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStorageTLSVersion.PolicyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageTLSVersion.PolicyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Modify"
+   },
+   "RobecoStorageTLSVersion.TLSVersion": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageTLSVersion.TLSVersion",
+     "description": "Sets the minimum allowed value"
+    },
+    "allowedValues": [
+     "TLS1_2"
+    ],
+    "defaultValue": "TLS1_2"
+   },
+   "RobecoStorageRedundancy.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStorageRedundancy.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStoragePointInTimeBlob.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStoragePointInTimeBlob.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   },
+   "RobecoStoragePointInTimeFile.policyEffect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "RobecoStoragePointInTimeFile.policyEffect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "Append",
+     "Audit",
+     "AuditIfNotExits",
+     "Deny",
+     "DeployIfNotExists",
+     "Disabled",
+     "Modify"
+    ],
+    "defaultValue": "Deny"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "11000170047062598929",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageDisableAnonymousAccess",
+    "parameters": {
+     "RobecoStorageDisableAnonymousAccess.policyEffect": {
+      "value": "[parameters('RobecoStorageDisableAnonymousAccess.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "5118624257959300842",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageEnforceHTTPS",
+    "parameters": {
+     "RobecoStorageEnforceHttps.policyEffect": {
+      "value": "[parameters('RobecoStorageEnforceHTTPS.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "4443478748214967318",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageRestrictPublicStorageAccounts",
+    "parameters": {
+     "RobecoStorageRestrictPublicStorageAccounts.policyEffect": {
+      "value": "[parameters('RobecoStorageRestrictPublicStorageAccounts.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "5395595852123216154",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageEncryptionAtRest",
+    "parameters": {
+     "RobecoStorageEncryptionAtRest.policyEffect": {
+      "value": "[parameters('RobecoStorageEncryptionAtRest.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "13261194224539332653",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageTLSVersion",
+    "parameters": {
+     "RobecoStorageTLSVersion.PolicyEffect": {
+      "value": "[parameters('RobecoStorageTLSVersion.PolicyEffect')]"
+     },
+     "RobecoStorageTLSVersion.TLSVersion": {
+      "value": "[parameters('RobecoStorageTLSVersion.TLSVersion')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "15060763199338480353",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStorageRedundancy",
+    "parameters": {
+     "RobecoStorageRedundancy.policyEffect": {
+      "value": "[parameters('RobecoStorageRedundancy.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "16158622425375823772",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStoragePointInTimeBlob",
+    "parameters": {
+     "RobecoStoragePointInTimeBlob.policyEffect": {
+      "value": "[parameters('RobecoStoragePointInTimeBlob.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "10772320751625809295",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policyDefinitions/RobecoStoragePointInTimeFile",
+    "parameters": {
+     "RobecoStoragePointInTimeFile.policyEffect": {
+      "value": "[parameters('RobecoStoragePointInTimeFile.policyEffect')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/RobecoBV/providers/Microsoft.Authorization/policySetDefinitions/RobecoStorage",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "RobecoStorage"
+}
